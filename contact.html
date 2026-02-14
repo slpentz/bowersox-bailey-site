@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact — Bowersox & Bailey</title>
+    <meta name="description" content="Contact Bowersox & Bailey." />
+    <link rel="stylesheet" href="assets/styles.css" />
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <nav class="nav">
+          <a class="brand" href="index.html"><span class="logo"></span><span>Bowersox &amp; Bailey</span></a>
+          <div class="links">
+            <a data-nav="true" href="index.html">Home</a>
+            <a data-nav="true" href="about.html">About</a>
+            <a data-nav="true" href="manufacturing.html">Manufacturing</a>
+            <a data-nav="true" href="kreative-kreations.html">Kreative Kreations</a>
+            <a data-nav="true" href="games.html">Games</a>
+            <a data-nav="true" href="contact.html">Contact</a>
+          </div>
+          <button class="burger" id="burger">☰</button>
+          <a class="cta" href="contact.html">Email us →</a>
+        </nav>
+        <div class="mobile" id="mobileMenu">
+          <a href="index.html">Home</a><a href="about.html">About</a><a href="manufacturing.html">Manufacturing</a>
+          <a href="kreative-kreations.html">Kreative Kreations</a><a href="games.html">Games</a><a href="contact.html">Contact</a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="container">
+          <div class="badge"><span class="dot"></span><span>Clear communication • Real timelines • No fluff</span></div>
+          <h1>Contact</h1>
+          <p class="sub">
+            For manufacturing, creative work, or game retail/distribution — send a message and we’ll respond with next steps.
+          </p>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="grid3" style="grid-template-columns: 1.2fr .8fr .8fr;">
+            <div class="card pad">
+              <h2 style="margin:0 0 10px 0; font-size:24px;">Send a message</h2>
+              <form class="form" id="contactForm">
+                <div class="grid2">
+                  <div>
+                    <label for="name">Name</label>
+                    <input id="name" name="name" required placeholder="Your name" />
+                  </div>
+                  <div>
+                    <label for="email">Email</label>
+                    <input id="email" name="email" type="email" required placeholder="you@email.com" />
+                  </div>
+                </div>
+                <div>
+                  <label for="message">Message</label>
+                  <textarea id="message" name="message" rows="6" required placeholder="How can we help?"></textarea>
+                </div>
+                <button class="btn primary" type="submit">Send</button>
+                <p class="small" id="contactMsg" aria-live="polite"></p>
+              </form>
+              <p class="small" style="margin-top:10px;">
+                Connect Formspree/Netlify Forms to deliver emails (currently demo confirmation).
+              </p>
+            </div>
+
+            <div class="card pad">
+              <h2 style="margin:0 0 10px 0; font-size:24px;">Info</h2>
+              <div class="small" style="display:grid; gap:10px;">
+                <div><strong>Email:</strong> you@bowersoxbailey.com</div>
+                <div><strong>Phone:</strong> (555) 555-5555</div>
+                <div><strong>Hours:</strong> Mon–Sat • 9am–6pm</div>
+              </div>
+            </div>
+
+            <div class="card pad">
+              <h2 style="margin:0 0 10px 0; font-size:24px;">Inquiries</h2>
+              <div class="small" style="display:grid; gap:10px;">
+                <div><strong>Manufacturing:</strong> specs, runs, timelines</div>
+                <div><strong>Kreative:</strong> commissions, products</div>
+                <div><strong>Games:</strong> retail &amp; distribution</div>
+              </div>
+              <div class="actions" style="margin-top:14px;">
+                <a class="btn" href="games.html">Games page</a>
+                <a class="btn" href="manufacturing.html">Manufacturing</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container footer-row">
+        <div>© <span id="year"></span> Bowersox &amp; Bailey. All rights reserved.</div>
+        <div class="footer-links">
+          <a href="about.html">About</a>
+          <a href="manufacturing.html">Manufacturing</a>
+          <a href="kreative-kreations.html">Kreative Kreations</a>
+          <a href="games.html">Games</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="assets/site.js"></script>
+  </body>
+</html>
