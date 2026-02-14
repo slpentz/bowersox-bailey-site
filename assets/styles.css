@@ -44,6 +44,18 @@ header{
   display:flex;align-items:center;justify-content:space-between;
   padding:14px 0;gap:14px;
 }
+.brand-logo {
+    height: 42px;
+    width: auto;
+    object-fit: contain;
+}
+.nav-ico {
+    height: 18px;
+    width: auto;
+    margin-right: 8px;
+    vertical-align: middle;
+}
+
 .brand{display:flex;align-items:center;gap:10px;font-weight:850;letter-spacing:.2px}
 .logo{
   width:34px;height:34px;border-radius:12px;
