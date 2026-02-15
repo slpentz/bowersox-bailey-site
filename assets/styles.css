@@ -227,15 +227,9 @@ footer{
             height: 260px;
         }
 }
-/* Ensure sections line up consistently */
-.section .container {
-    max-width: 1100px; /* adjust if your site uses a different max */
-}
-
-/* Photo grid: consistent alignment */
 .photo-grid {
     display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(3,minmax(0,1fr));
     gap: 16px;
     margin-top: 20px;
 }
@@ -269,9 +263,9 @@ footer{
             height: 340px;
         }
 
-@media (max-width: 900px) {
+@media(max-width:900px) {
     .photo-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-template-columns: repeat(2,minmax(0,1fr));
     }
 
     .photo.wide {
@@ -279,7 +273,7 @@ footer{
     }
 }
 
-@media (max-width: 560px) {
+@media(max-width:560px) {
     .photo-grid {
         grid-template-columns: 1fr;
     }
@@ -287,11 +281,8 @@ footer{
     .photo.wide {
         grid-column: span 1;
     }
-
-    .photo img {
-        height: 240px;
-    }
 }
 
 
+ 
 
