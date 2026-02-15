@@ -282,6 +282,47 @@ footer{
         grid-column: span 1;
     }
 }
+.game-card {
+    background: rgba(255,255,255,0.03);
+    border-radius: 16px;
+    padding: 24px;
+    display: grid;
+    gap: 24px;
+}
+
+.game-gallery {
+    display: grid;
+    gap: 16px;
+}
+
+    .game-gallery.two-up {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+@media (max-width: 768px) {
+    .game-gallery.two-up {
+        grid-template-columns: 1fr;
+    }
+}
+
+.game-gallery figure {
+    background: rgba(255,255,255,0.04);
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.game-gallery img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.game-gallery figcaption {
+    padding: 8px 10px;
+    font-size: 0.85rem;
+    opacity: 0.75;
+}
+
 
 
  
