@@ -227,58 +227,24 @@ footer{
             height: 260px;
         }
 }
-.grid2 {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 32px;
+/* Ensure sections line up consistently */
+.section .container {
+    max-width: 1100px; /* adjust if your site uses a different max */
 }
 
-.align-center {
-    align-items: center;
-}
-
-.photo.feature {
-    border-radius: 18px;
-    overflow: hidden;
-    border: 1px solid rgba(255,255,255,.12);
-    background: rgba(255,255,255,.03);
-}
-
-    .photo.feature img {
-        width: 100%;
-        height: 360px;
-        object-fit: cover;
-        display: block;
-    }
-
-    .photo.feature figcaption {
-        padding: 12px 14px;
-        font-size: 13px;
-        color: var(--muted);
-        background: rgba(0,0,0,.25);
-    }
-
-@media (max-width: 900px) {
-    .grid2 {
-        grid-template-columns: 1fr;
-    }
-
-    .photo.feature img {
-        height: 280px;
-    }
-}
-
+/* Photo grid: consistent alignment */
 .photo-grid {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 14px;
+    gap: 16px;
+    margin-top: 20px;
 }
 
 .photo {
     margin: 0;
-    border: 1px solid rgba(255,255,255,.10);
     border-radius: 16px;
     overflow: hidden;
+    border: 1px solid rgba(255,255,255,.10);
     background: rgba(255,255,255,.03);
 }
 
@@ -300,7 +266,7 @@ footer{
     }
 
         .photo.wide img {
-            height: 320px;
+            height: 340px;
         }
 
 @media (max-width: 900px) {
@@ -326,5 +292,6 @@ footer{
         height: 240px;
     }
 }
+
 
 
