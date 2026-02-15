@@ -81,72 +81,73 @@
           </div>
       </section>
 
-      <section class="section">
-        <div></div> class="container">
-          <div class="grid3" style="grid-template-columns: 1.2fr .8fr .8fr;">
-            <div class="card pad">
-              <h2 style="margin:0 0 10px 0; font-size:24px;">Send a message</h2>
-              <form class="form" id="contactForm">
-                <div class="grid2">
-                  <div>
-                    <label for="name">Name</label>
-                    <input id="name" name="name" required placeholder="Your name" />
+      <section class="section" id="message">
+          <div class="container">
+              <div class="grid3" style="grid-template-columns: 1.2fr .8fr .8fr;">
+
+                  <div class="card pad">
+                      <h2 style="margin:0 0 10px 0; font-size:24px;">Send a message</h2>
+                      <form class="form" id="contactForm">
+                          <div class="grid2">
+                              <div>
+                                  <label for="name">Name</label>
+                                  <input id="name" name="name" required placeholder="Your full name" />
+                              </div>
+                              <div>
+                                  <label for="email">Email</label>
+                                  <input id="email" name="email" type="email" required placeholder="name@company.com" />
+                              </div>
+                          </div>
+                          <div>
+                              <label for="message">Message</label>
+                              <textarea id="message" name="message" rows="6" required placeholder="How can we help?"></textarea>
+                          </div>
+                          <button class="btn primary" type="submit">Send</button>
+                          <p class="small" id="contactMsg" aria-live="polite"></p>
+                      </form>
+                      <p class="small" style="margin-top:10px;">
+                          Connect Formspree/Netlify Forms to deliver emails (currently demo confirmation).
+                      </p>
                   </div>
-                  <div>
-                    <label for="email">Email</label>
-                    <input id="email" name="email" type="email" required placeholder="you@email.com" />
+
+                  <div class="card pad">
+                      <h2 style="margin:0 0 10px 0; font-size:24px;">Info</h2>
+                      <div class="small" style="display:grid; gap:10px;">
+
+
+                          <p>
+                              <strong>Contact:</strong><br>
+                              Kenny Bowersox, Jr
+                          </p>
+
+                          <p>
+                              <strong>Phone:</strong><br>
+                              <a href="tel:15709402005">570-940-2005</a>
+                          </p>
+
+                          <p>
+                              <strong>Hours:</strong><br>
+                              Monday–Friday • 11:00 AM – 7:00 PM
+                          </p>
+
+                          <p class="small"><em>Call for wholesale pricing and business inquiries.</em></p>
+
+                      </div>
+
+                      <div class="card pad">
+                          <h2 style="margin:0 0 10px 0; font-size:24px;">Inquiries</h2>
+                          <div class="small" style="display:grid; gap:10px;">
+                              <div><strong>Manufacturing:</strong> specs, runs, timelines</div>
+                              <div><strong>Kreative:</strong> commissions, products</div>
+                              <div><strong>Games:</strong> retail &amp; distribution</div>
+                          </div>
+                          <div class="actions" style="margin-top:14px;">
+                              <a class="btn" href="games.html">Games page</a>
+                              <a class="btn" href="manufacturing.html">Manufacturing</a>
+                          </div>
+                      </div>
                   </div>
-                </div>
-                <div>
-                  <label for="message">Message</label>
-                  <textarea id="message" name="message" rows="6" required placeholder="How can we help?"></textarea>
-                </div>
-                <button class="btn primary" type="submit">Send</button>
-                <p class="small" id="contactMsg" aria-live="polite"></p>
-              </form>
-              <p class="small" style="margin-top:10px;">
-                Connect Formspree/Netlify Forms to deliver emails (currently demo confirmation).
-              </p>
-            </div>
-
-            <div class="card pad">
-              <h2 style="margin:0 0 10px 0; font-size:24px;">Info</h2>
-              <div class="small" style="display:grid; gap:10px;">
-                  <h3>Info</h3>
-
-                  <p>
-                      <strong>Contact:</strong><br>
-                      Kenny Bowersox, Jr
-                  </p>
-
-                  <p>
-                      <strong>Phone:</strong><br>
-                      <a href="tel:15709402005">570-940-2005</a>
-                  </p>
-
-                  <p>
-                      <strong>Hours:</strong><br>
-                      Monday–Friday • 11:00 AM – 7:00 PM
-                  </p>
-
-                  <p class="small"><em>Call for wholesale pricing and business inquiries.</em></p>
-
               </div>
-
-            <div class="card pad">
-              <h2 style="margin:0 0 10px 0; font-size:24px;">Inquiries</h2>
-              <div class="small" style="display:grid; gap:10px;">
-                <div><strong>Manufacturing:</strong> specs, runs, timelines</div>
-                <div><strong>Kreative:</strong> commissions, products</div>
-                <div><strong>Games:</strong> retail &amp; distribution</div>
-              </div>
-              <div class="actions" style="margin-top:14px;">
-                <a class="btn" href="games.html">Games page</a>
-                <a class="btn" href="manufacturing.html">Manufacturing</a>
-              </div>
-            </div>
-          </div>
-        </div>
       </section>
     </main>
 
