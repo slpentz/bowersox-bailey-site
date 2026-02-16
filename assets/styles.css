@@ -322,6 +322,29 @@ footer{
     font-size: 0.85rem;
     opacity: 0.75;
 }
+.status {
+    display: inline-block;
+    margin-bottom: 8px;
+    padding: 4px 10px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.status-production {
+    background: rgba(120, 200, 140, 0.15);
+    color: #7ddc9a;
+}
+
+.status-early {
+    background: rgba(255, 200, 120, 0.15);
+    color: #ffd27d;
+}
+
+.status-design {
+    background: rgba(180, 160, 255, 0.15);
+    color: #b9a7ff;
+}
 
 
 
