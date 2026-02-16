@@ -154,153 +154,210 @@
                   </div>
 
                   <div class="grid3">
-                      <section class="section">
+                      <section class="section" id="games-development">
                           <div class="container">
-                              <div class="section-title">
-                                  <h2>In Development</h2>
-                                  <p>Current game projects in motion. Status reflects the current production phase.</p>
-                              </div>
-
-                              <div class="grid3">
-                                  <!-- Bahatchi -->
-                                  <div class="card pad">
-                                      <h3>Bahatchi</h3>
-                                      <p class="status status-production">Final stages of production</p>
-                                      <p>
-                                          A fast-paced, color-driven dice game designed to bring family game night
-                                          back to the kitchen table. Final refinements and production readiness underway.
+                              <div class="games-layout">
+                                  <!-- LEFT: In Development -->
+                                  <div class="dev-card card pad">
+                                      <h2 class="dev-title">In Development</h2>
+                                      <p class="dev-sub">
+                                          Current game projects in motion. Status reflects the current production phase.
                                       </p>
-                                  </div>
 
-                                  <!-- Castaway -->
-                                  <div class="card pad">
-                                      <h3>Castaway</h3>
-                                      <p class="status status-early">Early stages of production</p>
-                                      <p>
-                                          A survival-themed tabletop experience exploring strategy, chance, and resilience.
-                                          Core mechanics and early prototypes currently in development.
-                                      </p>
-                                  </div>
+                                      <div class="dev-grid">
+                                          <!-- Bahatchi -->
+                                          <article class="game-tile">
+                                              <div class="game-tile__top">
+                                                  <h3>Bahatchi</h3>
+                                                  <span class="status-pill status-final">Final stages of production</span>
+                                              </div>
+                                              <p>
+                                                  A fast-paced, color-driven dice game designed to bring family game night back to the kitchen table.
+                                                  Final refinements and production readiness underway.
+                                              </p>
+                                          </article>
 
-                                  <!-- Rat Race -->
-                                  <div class="card pad">
-                                      <h3>Rat Race</h3>
-                                      <p class="status status-design">Developmental design phase</p>
-                                      <p>
-                                          A strategic concept focused on resource movement, risk, and progression.
-                                          Currently in design exploration and rule-system development.
-                                      </p>
-                                  </div>
-                              </div>
-                          </div>
-                      </section>
+                                          <!-- Castaway -->
+                                          <article class="game-tile">
+                                              <div class="game-tile__top">
+                                                  <h3>Castaway</h3>
+                                                  <span class="status-pill status-early">Early stages of production</span>
+                                              </div>
+                                              <p>
+                                                  A survival-themed tabletop experience exploring strategy, chance, and resilience.
+                                                  Core mechanics and early prototypes in progress.
+                                              </p>
+                                          </article>
 
-
-                      <!-- Production credibility section -->
-                      <section class="section">
-                          <div class="container">
-                              <div class="section-title">
-                                  <h2>Production credibility</h2>
-                                  <p>
-                                      We operate with active manufacturing and testing workflows — not just concept work.
-                                      Releases progress only when components, rules, and packaging meet durability and consistency standards.
-                                  </p>
-                              </div>
-
-                              <div class="grid3">
-                                  <div class="tile">
-                                      <h3>Prototype → Spec → Run</h3>
-                                      <p>
-                                          We iterate from paper prototypes to component-ready specifications,
-                                          updating rules and layouts based on repeatable playtest outcomes.
-                                      </p>
-                                  </div>
-                                  <div class="tile">
-                                      <h3>Handling &amp; Durability Checks</h3>
-                                      <p>
-                                          We validate component wear, print consistency, and pack-out reliability to ensure games hold up
-                                          through real tabletop use.
-                                      </p>
-                                  </div>
-                                  <div class="tile">
-                                      <h3>Transparent Milestones</h3>
-                                      <p>
-                                          Status indicators reflect actual phase. We avoid announcing timelines until production readiness
-                                          is confirmed.
-                                      </p>
-                                  </div>
-                              </div>
-                          </div>
-                      </section>
-
-                      <!-- Email signup -->
-                      <section class="section" id="signup">
-                          <div class="container">
-                              <div class="card pad">
-                                  <h2 style="margin:0 0 10px 0; font-size:24px;">Email updates</h2>
-                                  <p class="small" style="margin:0 0 12px 0; max-width:90ch;">
-                                      Get notified when a game hits a major milestone (open playtest, production run, release window).
-                                      No spam — only meaningful updates.
-                                  </p>
-
-                                  <form class="form" id="gamesSignup">
-                                      <div class="grid2">
-                                          <div>
-                                              <label for="gname">Name</label>
-                                              <input id="gname" name="name" placeholder="Your name" required />
-                                          </div>
-                                          <div>
-                                              <label for="gemail">Email</label>
-                                              <input id="gemail" name="email" type="email" placeholder="you@email.com" required />
-                                          </div>
+                                          <!-- Rat Race -->
+                                          <article class="game-tile">
+                                              <div class="game-tile__top">
+                                                  <h3>Rat Race</h3>
+                                                  <span class="status-pill status-design">Developmental design</span>
+                                              </div>
+                                              <p>
+                                                  A strategic concept focused on resource movement, risk, and progression.
+                                                  Currently in design exploration and rulesystem development.
+                                              </p>
+                                          </article>
                                       </div>
-                                      <button class="btn primary" type="submit">Notify me</button>
-                                      <p class="small" id="gamesMsg" aria-live="polite"></p>
-                                  </form>
+                                  </div>
 
-                                  <p class="small" style="margin-top:10px;">
-                                      To make this form deliver emails, connect Formspree or Netlify Forms.
-                                  </p>
-                              </div>
-                          </div>
-                      </section>
+                                  <!-- MIDDLE: Production credibility (simple) -->
+                                  <div class="cred-card card pad">
+                                      <h2 class="cred-title">Production credibility</h2>
+                                      <p class="cred-copy">
+                                          We operate with active prototyping, testing, and in-house manufacturing — not concept-only development.
+                                          Releases move forward only when components, rules, and packaging meet durability, consistency, and real
+                                          tabletop-use standards.
+                                      </p>
+                                  </div>
 
-                      <!-- Contact CTA for retail/distribution -->
-                      <section class="section" id="inquiries">
-                          <div class="container">
-                              <div class="card pad">
-                                  <h2 style="margin:0 0 10px 0; font-size:24px;">Retail &amp; distribution</h2>
-                                  <p class="sub" style="margin:0 0 14px 0;">
-                                      Interested in stocking or distributing <strong>Bowersox &amp; Bailey Games</strong>?
-                                      We can share component specs, and production readiness details upon request.
-                                  </p>
-                                  <div class="actions">
-                                      <a class="btn primary" href="contact.html">Contact us</a>
-                                      <a class="btn" href="about.html">About Bowersox &amp; Bailey</a>
+                                  <!-- RIGHT: Email updates -->
+                                  <div class="updates-card card pad">
+                                      <h2 class="updates-title">Email updates</h2>
+                                      <p class="updates-sub">
+                                          Get notified when a game hits a major milestone (open playtest, production run, release window).
+                                          No spam — only meaningful updates.
+                                      </p>
+
+                                      <!-- If you want this to actually submit on Netlify, add data-netlify="true" name="game-updates" -->
+                                      <form class="form updates-form" name="game-updates" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+                                          <input type="hidden" name="form-name" value="game-updates" />
+                                          <p class="sr-only">
+                                              <label>Don’t fill this out: <input name="bot-field" /></label>
+                                          </p>
+
+                                          <div class="grid2">
+                                              <div>
+                                                  <label>Name</label>
+                                                  <input name="Name" placeholder="Your name" required />
+                                              </div>
+                                              <div>
+                                                  <label>Email</label>
+                                                  <input name="Email" type="email" placeholder="you@email.com" required />
+                                              </div>
+                                          </div>
+
+                                          <div class="actions" style="margin-top:12px;">
+                                              <button class="btn primary" type="submit">Notify me</button>
+                                          </div>
+
+                                          <p class="small" style="margin-top:10px;">
+                                              To deliver these emails, connect Netlify Forms notifications or your email provider.
+                                          </p>
+                                      </form>
                                   </div>
                               </div>
                           </div>
                       </section>
-</main>
 
-      <footer>
-          <div class="container footer-row">
-              <div>
-                  © <span id="year"></span> Bowersox &amp; Bailey. All rights reserved.
-                  <div class="legal-name">Bowersox &amp; Bailey Manufacturing LLC</div>
-              </div>
-
-              <div class="footer-links">
-                  <a href="about.html">About</a>
-                  <a href="manufacturing.html">Manufacturing</a>
-                  <a href="kreative-kreations.html">Kreative Kreations</a>
-                  <a href="games.html">Games</a>
-                  <a href="contact.html">Contact</a>
-              </div>
-          </div>
-      </footer>
+                     
 
 
-      <script src="assets/site.js"></script>
-  </body>
-</html>
+                          <!-- Production credibility section -->
+                          <section class="section" >
+                          <div class="container" >
+                          <div class="section-title" >
+                          <h2 > Production credibility</h2 >
+                          <p >
+                          We operate with active manufacturing and testing workflows — not just concept work.
+                          Releases progress only when components, rules, and packaging meet durability and consistency standards.
+                          </p >
+                          </div >
+
+                          <div class="grid3" >
+                          <div class="tile" >
+                          <h3 > Prototype → Spec → Run</h3 >
+                          <p >
+                          We iterate from paper prototypes to component-ready specifications,
+                          updating rules and layouts based on repeatable playtest outcomes.
+                          </p >
+                          </div >
+                          <div class="tile" >
+                          <h3 > Handling &amp; Durability Checks</h3 >
+                          <p >
+                          We validate component wear, print consistency, and pack-out reliability to ensure games hold up
+                          through real tabletop use.
+                          </p >
+                          </div >
+                          <div class="tile" >
+                          <h3 > Transparent Milestones</h3 >
+                          <p >
+                          Status indicators reflect actual phase. We avoid announcing timelines until production readiness
+                          is confirmed.
+                          </p >
+                          </div >
+                          </div >
+                          </div >
+                          </section >
+                          <!-- Email signup -->
+                          <section class="section" id="signup" >
+                          <div class="container" >
+                          <div class="card pad" >
+                          <h2 style="margin:0 0 10px 0; font-size:24px;" > Email updates</h2 >
+                          <p class="small" style="margin:0 0 12px 0; max-width:90ch;" >
+                          Get notified when a game hits a major milestone (open playtest, production run, release window).
+                          No spam — only meaningful updates.
+                          </p >
+
+                          <form class="form" id="gamesSignup" >
+                          <div class="grid2" >
+                          <div >
+                          <label for="gname" > Name</label >
+                          <input id="gname" name="name" placeholder="Your name" required / >
+                          </div >
+                          <div >
+                          <label for="gemail" > Email</label >
+                          <input id="gemail" name="email" type="email" placeholder="you@email.com" required / >
+                          </div >
+                          </div >
+                          <button class="btn primary" type="submit" > Notify me</button >
+                          <p class="small" id="gamesMsg" aria-live="polite" > </p >
+                          </form >
+
+                          <p class="small" style="margin-top:10px;" >
+                          To make this form deliver emails, connect Formspree or Netlify Forms.
+                          </p >
+                          </div >
+                          </div >
+                          </section >
+                          <!-- Contact CTA for retail/distribution -->
+                          <section class="section" id="inquiries" >
+                          <div class="container" >
+                          <div class="card pad" >
+                          <h2 style="margin:0 0 10px 0; font-size:24px;" > Retail &amp; distribution</h2 >
+                          <p class="sub" style="margin:0 0 14px 0;" >
+                          Interested in stocking or distributing <strong > Bowersox &amp; Bailey Games</strong > ?
+                          We can share component specs, and production readiness details upon request.
+                          </p >
+                          <div class="actions" >
+                          <a class="btn primary" href="contact.html" > Contact us</a >
+                          <a class="btn" href="about.html" > About Bowersox &amp; Bailey</a >
+                          </div >
+                          </div >
+                          </div >
+                          </section >
+                          </main >
+
+                          <footer >
+                          <div class="container footer-row" >
+                          <div >
+                          © <span id="year" > </span > Bowersox &amp; Bailey. All rights reserved.
+                          <div class="legal-name" > Bowersox &amp; Bailey Manufacturing LLC</div >
+                          </div >
+
+                          <div class="footer-links" >
+                          <a href="about.html" > About</a >
+                          <a href="manufacturing.html" > Manufacturing</a >
+                          <a href="kreative-kreations.html" > Kreative Kreations</a >
+                          <a href="games.html" > Games</a >
+                          <a href="contact.html" > Contact</a >
+                          </div >
+                          </div >
+                          </footer >
+
+
+                          <script src="assets/site.js" > </script >
+                          </body >
+                          </html >
