@@ -40,7 +40,7 @@
                           netlify-honeypot="bot-field"
                           action="/order-success.html">
 
-                        <!-- REQUIRED for Netlify -->
+                        <!-- Required for Netlify -->
                         <input type="hidden" name="form-name" value="order" />
 
                         <!-- Honeypot -->
@@ -48,8 +48,11 @@
                             <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
                         </p>
 
-                        <!-- Product auto-filled from ?product=... -->
+                        <!-- Product auto-filled from URL -->
                         <input type="hidden" id="product" name="Product" value="" />
+
+                        <!-- (Optional but recommended) store a simple price string -->
+                        <input type="hidden" id="price" name="Price" value="" />
 
                         <div class="grid2">
                             <div>
@@ -104,26 +107,35 @@
         (function () {
             const params = new URLSearchParams(window.location.search);
             const product = params.get("product");
+            const price = params.get("price");
 
-            // Fill hidden Product field
+            // Hidden fields
             const productInput = document.getElementById("product");
-            if (productInput && product) productInput.value = product;
+            const priceInput = document.getElementById("price");
 
-            // Default request type based on product
+            if (productInput && product) productInput.value = product;
+            if (priceInput && price) priceInput.value = price;
+
+            // Request Type dropdown
             const requestType = document.getElementById("requestType");
             if (requestType && product) {
-                const p = product.toLowerCase();
+                // Must match the OPTION VALUE in your select
+                requestType.value = "Kreative Kreations";
+            }
 
-                // If it's a game product, keep it as Game order
-                if (p.includes("bahatchi") || p.includes("castaway") || p.includes("rat race")) {
-                    requestType.value = "Game order";
-                } else {
-                    // Otherwise treat it as Kreative Kreations / Home & Office Decor
-                    requestType.value = "Kreative Kreations";
+            // Details textarea (optional, but helps a ton)
+            const details = document.querySelector('textarea[name="Details"]');
+            if (details && product) {
+                const header = `Item: ${product}${price ? ` | Price: ${price}` : ""}\n\n`;
+                // Only add if it's not already there
+                if (!details.value.trim()) {
+                    details.value = header;
+                } else if (!details.value.includes(`Item: ${product}`)) {
+                    details.value = header + details.value;
                 }
             }
 
-            // If hash is #order-form, scroll nicely
+            // If hash included #order-form, scroll there
             if (window.location.hash === "#order-form") {
                 const el = document.getElementById("order-form");
                 if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
