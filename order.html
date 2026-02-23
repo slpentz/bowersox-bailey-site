@@ -74,6 +74,7 @@
                                 <select name="Request Type" id="requestType" required>
                                     <option value="">Select...</option>
                                     <option value="Game order">Game order</option>
+                                    <option value="Kreative Kreations">Home/Office Decor</option>
                                     <option value="Wholesale pricing">Wholesale pricing</option>
                                     <option value="Custom manufacturing">Custom manufacturing</option>
                                 </select>
@@ -108,9 +109,19 @@
             const productInput = document.getElementById("product");
             if (productInput && product) productInput.value = product;
 
-            // If product present, default request type to "Game order"
+            // Default request type based on product
             const requestType = document.getElementById("requestType");
-            if (requestType && product) requestType.value = "Game order";
+            if (requestType && product) {
+                const p = product.toLowerCase();
+
+                // If it's a game product, keep it as Game order
+                if (p.includes("bahatchi") || p.includes("castaway") || p.includes("rat race")) {
+                    requestType.value = "Game order";
+                } else {
+                    // Otherwise treat it as Kreative Kreations / Home & Office Decor
+                    requestType.value = "Kreative Kreations";
+                }
+            }
 
             // If hash is #order-form, scroll nicely
             if (window.location.hash === "#order-form") {
